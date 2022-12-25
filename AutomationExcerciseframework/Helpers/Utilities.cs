@@ -42,8 +42,8 @@ namespace AutomationExcerciseframework.Helpers
 
         public void DropdownSelect(By select, string option)
         {
-            WebDriver wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
-            wait.until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(select));
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(select));
             var dropdown = _driver.FindElement(select);
             var selectElement = new SelectElement(dropdown);
             selectElement.SelectByValue(option);
